@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.Scanner;
+import models.Episode;
 import service.CharacterRestClient;
 import service.EpisodeRestClient;
 import service.LocationRestClient;
@@ -29,6 +30,10 @@ public class app {
 //
 //episodeRest.getEpisodeById(input);
 episodeRest.getAllEpisodes();
+
+//Episode e1 = new Episode();
+//
+//        System.out.println(e1.getCharacters());
 
     }
 

@@ -1,5 +1,3 @@
-
-
 package models;
 
 import java.io.Serializable;
@@ -10,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @XmlRootElement
 public class Origin implements Serializable {
-    
+
     @Id
     private String name;
     private String url;
@@ -43,9 +41,5 @@ public class Origin implements Serializable {
     public String toString() {
         return "Origin{" + "name=" + name + '}';
     }
-    
-    
-    
-    
 
 }

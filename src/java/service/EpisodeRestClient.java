@@ -39,9 +39,8 @@ public class EpisodeRestClient {
         Episode episodes = response.readEntity(Episode.class);
         List<Episode> results = episodes.getResults();
         
-        episodes.getCharacters();
+        System.out.println(results);
         
-        System.out.println(Arrays.toString(results.toArray(new Episode[results.size()])));
         return results;
     }
     

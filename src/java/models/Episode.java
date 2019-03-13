@@ -1,35 +1,29 @@
 package models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
+import service.CharacterRestClient;
 
 @Entity
 @XmlRootElement
 public class Episode implements Serializable {
-    
+
     private List<Episode> results;
+    private RMCharacters character;
+    CharacterRestClient charRest;
 
     @Id
     private int id;
     private String name;
     private String air_date;
     private String episode;
-    private List characters;
+    private List<String> characters;
     private String url;
     private String created;
-
-    public Episode(int id, String name, String air_date, String episode, List characters, String url, String created) {
-        this.id = id;
-        this.name = name;
-        this.air_date = air_date;
-        this.episode = episode;
-        this.characters = characters;
-        this.url = url;
-        this.created = created;
-    }
 
     public Episode() {
     }
@@ -66,14 +60,6 @@ public class Episode implements Serializable {
         this.episode = episode;
     }
 
-    public List getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(List characters) {
-        this.characters = characters;
-    }
-
     public String getUrl() {
         return url;
     }
@@ -100,11 +86,15 @@ public class Episode implements Serializable {
 
     @Override
     public String toString() {
-        return "Episode{" + "id=" + id + ", name=" + name + ", air_date=" + air_date + ", episode=" + episode + ", characters=" + characters + ", created=" + created + '}';
+        return "Episode{" + "id=" + id + ", name=" + name + ", air_date=" + air_date + ", episode=" + episode + ", characters=" + characters.toString() + ", created=" + created + '}';
     }
 
+    public List<String> getCharacters() {
+        return characters;
+    }
 
-    
-    
+    public void setCharacters(List<String> characters) {
+        this.characters = characters;
+    }
 
 }

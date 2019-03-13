@@ -102,8 +102,12 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "results=" + results + ", id=" + id + ", name=" + name + ", type=" + type + ", dimension=" + dimension + ", residents=" + residents + ", url=" + url + ", created=" + created + '}';
+        return "Location{" + "id=" + id + ", name=" + name + ", type=" + type + ", dimension=" + dimension + ", residents=" + residents + ", created=" + created + '}';
     }
+
+
+
+
     
     
 
