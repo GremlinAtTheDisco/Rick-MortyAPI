@@ -1,14 +1,13 @@
 package models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+
 @XmlRootElement
 public class RMCharacters implements Serializable {
 
@@ -26,7 +25,7 @@ public class RMCharacters implements Serializable {
     @OneToOne
     private Location location;
     private String image;
-    private List episode;
+    private List<String> episode;
     private String created;
 
 
@@ -105,11 +104,11 @@ public class RMCharacters implements Serializable {
         this.image = image;
     }
 
-    public List getEpisode() {
+    public List<String> getEpisode() {
         return episode;
     }
 
-    public void setEpisode(List episode) {
+    public void setEpisode(List<String> episode) {
         this.episode = episode;
     }
 

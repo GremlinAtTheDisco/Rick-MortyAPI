@@ -17,9 +17,9 @@ public class app {
 
     public static void main(String[] args) {
 
-//        System.out.println("Select id");
-//
-//        String input = sc.next();
+        System.out.println("Select input");
+
+        String input = sc.next();
 ////
 ////        characterRest.getCharacterById(input);
 //        characterRest.getAllCharacters();
@@ -29,11 +29,13 @@ public class app {
 ////locationRest.getAllLocations();
 //
 //episodeRest.getEpisodeById(input);
-episodeRest.getAllEpisodes();
+//episodeRest.getAllEpisodes();
 
 //Episode e1 = new Episode();
 //
 //        System.out.println(e1.getCharacters());
+
+characterRest.getDeadOrAliveCharacters(input);
 
     }
 

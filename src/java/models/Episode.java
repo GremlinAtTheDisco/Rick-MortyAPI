@@ -13,8 +13,6 @@ import service.CharacterRestClient;
 public class Episode implements Serializable {
 
     private List<Episode> results;
-    private RMCharacters character;
-    CharacterRestClient charRest;
 
     @Id
     private int id;
@@ -86,7 +84,7 @@ public class Episode implements Serializable {
 
     @Override
     public String toString() {
-        return "Episode{" + "id=" + id + ", name=" + name + ", air_date=" + air_date + ", episode=" + episode + ", characters=" + characters.toString() + ", created=" + created + '}';
+        return "Episode{" + "id=" + id + ", name=" + name + ", air_date=" + air_date + ", episode=" + episode + ", characters=" + characters + ", created=" + created + '}';
     }
 
     public List<String> getCharacters() {

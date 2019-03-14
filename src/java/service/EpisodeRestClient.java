@@ -16,6 +16,8 @@ import models.RMCharacters;
 
 public class EpisodeRestClient {
     
+    
+    
     Client client = ClientBuilder.newClient();
     WebTarget target = client.target("https://rickandmortyapi.com/api/").path("episode");
     
@@ -30,7 +32,7 @@ public class EpisodeRestClient {
         Episode episode = target.path(id).request().get(Episode.class);
         
         System.out.println(response.getStatus());
-        System.out.println(episode);
+        System.out.println(episode.getName());
         
         return episode;
     }

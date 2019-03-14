@@ -2,19 +2,15 @@ package models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+
 @XmlRootElement
 public class Location implements Serializable {
     
     
     private List<Location> results;
 
-    @Id
     private int id;
     private String name;
     private String type;

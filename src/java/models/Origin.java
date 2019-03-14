@@ -5,11 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
 @XmlRootElement
 public class Origin implements Serializable {
 
-    @Id
     private String name;
     private String url;
 
