@@ -4,11 +4,9 @@ import java.io.Serializable;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 @XmlRootElement
 public class Location implements Serializable {
-    
-    
+
     private List<Location> results;
 
     private int id;
@@ -100,11 +98,5 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "id=" + id + ", name=" + name + ", type=" + type + ", dimension=" + dimension + ", residents=" + residents + ", created=" + created + '}';
     }
-
-
-
-
-    
-    
 
 }

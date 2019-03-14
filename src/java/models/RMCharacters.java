@@ -2,32 +2,24 @@ package models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlRootElement;
-
 
 @XmlRootElement
 public class RMCharacters implements Serializable {
 
     private List<RMCharacters> results;
 
-    @Id
     private int id;
     private String name;
     private String status;
     private String species;
     private String type;
     private String gender;
-    @OneToOne
     private Origin origin;
-    @OneToOne
     private Location location;
     private String image;
     private List<String> episode;
     private String created;
-
 
     public RMCharacters() {
     }
@@ -132,7 +124,5 @@ public class RMCharacters implements Serializable {
     public String toString() {
         return "RMCharacters{" + "id=" + id + ", name=" + name + ", status=" + status + ", species=" + species + ", type=" + type + ", gender=" + gender + ", origin=" + origin + ", location=" + location + ", episode=" + episode + ", created=" + created + '}';
     }
-    
-    
 
 }
